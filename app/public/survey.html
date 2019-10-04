@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Take Survey</title>
+</head>
+<body>
+    <div id="surveymain">
+        <h1>Answer 1-5 on how you feel about each situation!</h1>
+    <div id="nandP">
+        <input type="text" class="top-form" id="name" placeholder="Firstname Lastname">
+        <input type="text" id="profile" class="top-form" id="photo" placeholder="Link to online photo.">
+    </div>
+    <div id="questions">
+        <label for="Q1">I like dancing</label>
+        <select id="Q1" class="onethrofive" id="Q1">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+        </select>
+    </div>
+    <div id="questions">
+        <label for="Q2">I like dogs</label>
+        <select id="Q2" class="onethrofive" id="Q1">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+        </select>
+    </div>
+    <div id="questions">
+        <label for="Q3">I like cats</label>
+        <select id="Q3" class="onethrofive" id="Q1">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+        </select>
+    </div>
+    <div id="questions">
+        <label for="Q4">I like fire</label>
+        <select id="Q4" class="onethrofive" id="Q1">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+        </select>
+    </div>
+    <div id="questions">
+        <label for="Q5">I like eating</label>
+        <select id="Q5" class="onethrofive" id="Q1">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+        </select>
+    </div>
+    <div id="questions">
+        <label for="Q6">I like working out</label>
+        <select id="Q6" class="onethrofive" id="Q1">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+        </select>
+    </div>
+    <div id="questions">
+        <label for="Q7">I like rap music</label>
+        <select id="Q7" class="onethrofive" id="Q1">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+        </select>
+    </div>
+    <div id="questions">
+        <label for="Q8">I like typing</label>
+        <select id="Q8" class="onethrofive" id="Q1">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+        </select>
+    </div>
+    <div id="questions">
+        <label for="Q9">I like pools</label>
+        <select id="Q9" class="onethrofive" id="Q1">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+        </select>
+    </div>
+    <div id="questions">
+        <label for="Q10">I like the name Alan</label>
+        <select id="Q10" class="onethrofive" id="Q1">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+        </select>
+    </div>
+    <button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit Survey</button>
+</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+    </script><script type="text/javascript">
+        var userInput = {
+				name: $('#name').val().trim(),
+				photo: $('#photo').val().trim(),
+				scores:[
+					$('#Q1').val().trim(),
+					$('#Q2').val().trim(),
+					$('#Q3').val().trim(),
+					$('#Q4').val().trim(),
+					$('#Q5').val().trim(),
+					$('#Q6').val().trim(),
+					$('#Q7').val().trim(),
+					$('#Q8').val().trim(),
+					$('#Q9').val().trim(),
+					$('#Q10').val().trim()
+				]
+			};
+			// console.log('userInput = ' + JSON.stringify(userInput));
+			// Add user inputs to friends list
+			$.post('/api/friends', userInput)
+      		.done(function(data) {
+      			// console.log('response = ' + JSON.stringify(data));
+      			// Set the name and image values of friend match
+      			$('#userMatch').html(data.matchName);
+		    	$("#userMatchImage").attr("src", data.matchImage);
+		    	// Pop open the modal dialog
+      			$('#modal1').modal('open');
+      		});
+		});
+    </script>
+</body>
+</html>
