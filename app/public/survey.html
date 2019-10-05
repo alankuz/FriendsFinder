@@ -1,154 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Take Survey</title>
 </head>
+
 <body>
+    <!-- survey  -->
     <div id="surveymain">
         <h1 class="heading">Answer 1-5 on how you feel about each situation!</h1>
-    <div id="nandP">
-        <input type="text" class="top-form" id="name" placeholder="Firstname Lastname">
-        <input type="text" class="top-form" id="photo" placeholder="Link to online photo.">
+        <div id="nandP">
+            <input type="text" class="top-form" id="name" placeholder="Firstname Lastname">
+            <input type="text" class="top-form" id="photo" placeholder="Link to online photo.">
+        </div>
+        <!-- questions -->
+        <div id="questions">
+            <label for="Q1">I like dancing</label>
+            <select id="Q1" class="onethrofive">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div id="questions">
+            <label for="Q2">I like dogs</label>
+            <select id="Q2" class="onethrofive">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div id="questions">
+            <label for="Q3">I like cats</label>
+            <select id="Q3" class="onethrofive">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div id="questions">
+            <label for="Q4">I like fire</label>
+            <select id="Q4" class="onethrofive">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div id="questions">
+            <label for="Q5">I like eating</label>
+            <select id="Q5" class="onethrofive">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div id="questions">
+            <label for="Q6">I like working out</label>
+            <select id="Q6" class="onethrofive">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div id="questions">
+            <label for="Q7">I like rap music</label>
+            <select id="Q7" class="onethrofive">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div id="questions">
+            <label for="Q8">I like typing</label>
+            <select id="Q8" class="onethrofive">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div id="questions">
+            <label for="Q9">I like pools</label>
+            <select id="Q9" class="onethrofive">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div id="questions">
+            <label for="Q10">I like the name Alan</label>
+            <select id="Q10" class="onethrofive">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit Survey</button>
     </div>
-    <div id="questions">
-        <label for="Q1">I like dancing</label>
-        <select id="Q1" class="onethrofive">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-        </select>
+
+    <!-- Popup  -->
+    <div id="mypopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img id="userMatchImage">
+            <p id="userMatch"></p>
+        </div>
     </div>
-    <div id="questions">
-        <label for="Q2">I like dogs</label>
-        <select id="Q2" class="onethrofive">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-        </select>
-    </div>
-    <div id="questions">
-        <label for="Q3">I like cats</label>
-        <select id="Q3" class="onethrofive">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-        </select>
-    </div>
-    <div id="questions">
-        <label for="Q4">I like fire</label>
-        <select id="Q4" class="onethrofive">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-        </select>
-    </div>
-    <div id="questions">
-        <label for="Q5">I like eating</label>
-        <select id="Q5" class="onethrofive">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-        </select>
-    </div>
-    <div id="questions">
-        <label for="Q6">I like working out</label>
-        <select id="Q6" class="onethrofive">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-        </select>
-    </div>
-    <div id="questions">
-        <label for="Q7">I like rap music</label>
-        <select id="Q7" class="onethrofive">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-        </select>
-    </div>
-    <div id="questions">
-        <label for="Q8">I like typing</label>
-        <select id="Q8" class="onethrofive">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-        </select>
-    </div>
-    <div id="questions">
-        <label for="Q9">I like pools</label>
-        <select id="Q9" class="onethrofive">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-        </select>
-    </div>
-    <div id="questions">
-        <label for="Q10">I like the name Alan</label>
-        <select id="Q10" class="onethrofive">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-        </select>
-    </div>
-    <button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit Survey</button>
-</div>
-<img id="userMatchImage"></div>
-<div id="userMatch"></div>
-  <script type="text/javascript">
-        $('#submitBtn').click(function(event){
+    <script type="text/javascript">
+        var popup = document.getElementById("mypopup");
+
+        // The button that opens the popup
+        var btn = document.getElementById("myBtn");
+
+        // The <span> element that closes the popup
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            popup.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        }
+
+        //   survey submitted function
+        $('#submitBtn').click(function (event) {
             event.preventDefault();
-            console.log('clicked')
-        var userInput = {
-				name: $('#name').val().trim(),
-				photo: $('#photo').val().trim(),
-				scores:[
-					$('#Q1').val().trim(),
-					$('#Q2').val().trim(),
-					$('#Q3').val().trim(),
-					$('#Q4').val().trim(),
-					$('#Q5').val().trim(),
-					$('#Q6').val().trim(),
-					$('#Q7').val().trim(),
-					$('#Q8').val().trim(),
-					$('#Q9').val().trim(),
-					$('#Q10').val().trim()
-				]
-			};
-			$.post('/api/friends', userInput)
-      		.done(function(info) {
-      			$('#userMatch').html(info.matchName);
-		    	$("#userMatchImage").attr("src", info.matchImage);
-      		});})
-		
+            var userInput = {
+                name: $('#name').val().trim(),
+                photo: $('#photo').val().trim(),
+                scores: [
+                    $('#Q1').val().trim(),
+                    $('#Q2').val().trim(),
+                    $('#Q3').val().trim(),
+                    $('#Q4').val().trim(),
+                    $('#Q5').val().trim(),
+                    $('#Q6').val().trim(),
+                    $('#Q7').val().trim(),
+                    $('#Q8').val().trim(),
+                    $('#Q9').val().trim(),
+                    $('#Q10').val().trim()
+                ]
+            };
+            // runs the api routes file and pulls back the info 
+            $.post('/api/friends', userInput)
+                .done(function (info) {
+                    $('#userMatch').html(info.matchName);
+                    $("#userMatchImage").attr("src", info.matchImage);
+                    popup.style.display = "block";
+                });
+        })
     </script>
 </body>
+
 </html>

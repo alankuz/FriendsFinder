@@ -1,3 +1,5 @@
+// default friends 
+
 var friends =[
     {
         name: "Conner Baldwin",
