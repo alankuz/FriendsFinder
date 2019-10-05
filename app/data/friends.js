@@ -1,4 +1,4 @@
-var friendlist =[
+var friends =[
     {
         name: "Conner Baldwin",
         photo: "https://cdn.nybooks.com/wp-content/uploads/2016/07/conner-frankie-fix.jpg",
@@ -137,10 +137,11 @@ var friendlist =[
             '4',
             '4',
             '4',
-            '0',
-            '0',
-            '0',
-            '0'
+            '1',
+            '1',
+            '1',
+            '1'
         ]
     }
-]
+];
+module.exports = friends;

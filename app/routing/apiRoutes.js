@@ -1,34 +1,37 @@
 var path = require('path');
-
-var friendList = require("../data/friends.js")
+var friendlist = require('../data/friends.js');
 module.exports = function(app) {
-	app.get('/api/friendlist', function(req, res) {
-		res.json(friendlist);
-	});
-    app.post('/api/friendlist', function(req, res) {
-		var userInput = req.body;
-		var userResponses = userInput.scores;
+	console.log('___ENTER apiRoutes.js___');
 
+	app.get('/api/friends', function(req, res) {
+		res.json(friendlist);
+		console.log(friendlist)
+	});
+
+	app.post('/api/friends', function(req, res) {
+		var userInput = req.body;
+		console.log(userInput)
+
+		var userinfo = userInput.scores;
+		var startVal = 10000; 
 		var matchName = '';
 		var matchImage = '';
-		var totalDifference = 10000; 
+		
 
-		for (var i = 0; i < friendList.length; i++) {
-
+		for (var i = 0; i < friendlist.length; i++) {
 			var diff = 0;
-			for (var j = 0; j < userResponses.length; j++) {
-				diff += Math.abs(friendList[i].scores[j] - userResponses[j]);
+			for (var x = 0; x < userinfo.length; x++) {
+				diff += Math.abs(friendlist[i].scores[x] - userinfo[x]);
 			}
-			if (diff < totalDifference) {
-				totalDifference = diff;
-				matchName = friendList[i].name;
-				matchImage = friendList[i].photo;
+
+			if (diff < startVal) {
+				startVal = diff;
+				matchName = friendlist[i].name;
+				matchImage = friendlist[i].photo;
 			}
 		}
 
-		friendList.push(userInput);
-
+		friendlist.push(userInput);
 		res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
 	});
 };
-
