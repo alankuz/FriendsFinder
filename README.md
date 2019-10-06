@@ -3,7 +3,7 @@
 
 ### DEMO 
 
-* [Click here for the demo](https://youtu.be/6EQMhcJonOU)
+* [Click here for the demo](https://enigmatic-taiga-02028.herokuapp.com/)
 This project displays skills in node.js, express.js, path, and body-parser by providing you with a friend match once the survey is completed. 
 
 ## Getting Started
